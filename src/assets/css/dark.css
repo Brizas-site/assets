@@ -12,7 +12,7 @@
 
 body.dark-mode {
     color: #d5dae2;
-    background: #1a1c33
+    background: #272d44
 }
 
 .dark-mode a:hover {
@@ -5541,19 +5541,35 @@ body.dark-mode {
 }
 
 .dark-mode.sidebar-mini.sidenav-toggled.sidenav-toggled1 .app-sidebar .side-menu__item,.dark-mode.sidebar-mini.sidenav-toggled.sidenav-toggled1 .app-sidebar .side-menu__label {
-    color: #d5dae2
+    color: #272d44
+}
+
+@keyframes colorRotate {
+    from {
+        background: #6666ff;
+    }
+    10% {
+        background: #0099ff;
+    }
+    50% {
+        background: #00ff00;
+    }
+    75% {
+        background: #ff3399;
+    }
+    100% {
+        background: #6666ff;
+    }
 }
 
 .dark-mode .side-menu__item.active,.dark-mode .side-menu__item:hover,.dark-mode .side-menu__item:focus {
-    background: #313D5D;
-    color: #d5dae2
+    color: #272d44;
 }
+
 
 .dark-mode .slide.active.is-expanded .side-menu__item {
-    background: #20223c;
-    color: #d5dae2
+    color: #272d44;
 }
-
 .dark-mode .profile-dropdown img {
     border: 2px solid #4a4d70
 }

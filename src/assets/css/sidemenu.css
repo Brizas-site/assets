@@ -463,8 +463,9 @@
 
 .side-menu {
     margin-bottom: 0;
-    padding-bottom: 40px
+    padding-bottom: 20px
 }
+
 
 .side-menu__item {
     position: relative;
@@ -474,21 +475,43 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 2.5px 22px 3px 5px;
+    padding: 2.5px 22px 3px 0px;
     font-size: 14px;
     font-weight: 400;
     -webkit-transition: border-left-color .3s ease,background-color .3s ease;
     -o-transition: border-left-color .3s ease,background-color .3s ease;
     transition: border-left-color .3s ease,background-color .3s ease;
     color: #1a1630;
-    margin: 6px 5px 6px 12px;
-    border-radius: 50px
+    margin: 6px 5px 6px 0px;
+    animation: colorRotate 6s linear 0s infinite;
+    border-radius: 50px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;    
+}
+
+@keyframes colorRotate {
+    from {
+        background: #6666ff;
+    }
+    10% {
+        background: #0099ff;
+    }
+    50% {
+        background: #00ff00;
+    }
+    75% {
+        background: #ff3399;
+    }
+    100% {
+        background: #6666ff;
+    }
 }
 
 .side-menu__item.active,.side-menu__item:hover,.side-menu__item:focus {
     text-decoration: none;
-    background: #ebeef1;
-    color: #1a1630
+    background: #272d44;
+    color: #1a1630;
+    
 }
 
 @media(min-width: 768px) {
@@ -529,6 +552,7 @@
     text-align: center;
     vertical-align: middle;
     margin-right: 12px;
+    margin-left: 12px;
     width: 37.5px;
     height: 37.5px;
     background: #fff;
@@ -585,13 +609,6 @@
     animation-name: fadeInUp
 }
 
-.slide .angle {
-    color:yellow
-}
-
-.slide.is-expanded .angle {
-    color: #00ff00;
-}
 
 .slide-menu {
     max-height: 0;
@@ -669,7 +686,8 @@
     }
 
     .sidebar-mini.sidenav-toggled .side-menu li .side-menu__item.active:before {
-        display: none
+        display: none;
+        background: #272d44;
     }
 
     .sidebar-mini.sidenav-toggled .app-sidebar__user {
@@ -699,12 +717,9 @@
         overflow: visible
     }
 
-    .sidebar-mini.sidenav-toggled .side-menu__item {
-        overflow: hidden
-    }
-
     .sidebar-mini.sidenav-toggled .side-menu__item:hover {
-        overflow: visible
+        overflow: visible;
+        background: #272d44;
     }
 
     .sidebar-mini.sidenav-toggled .side-menu__item:hover .side-menu__label {
@@ -767,10 +782,23 @@
     .app.sidebar-mini.sidenav-toggled .side-menu__item {
         display: block;
         padding: 10px 0;
+        box-shadow: -5px 0px 11px -4px rgb(5 255 220 / 0%), 5px 0px 11px -4px rgb(211 3 255 / 0%), 5px -3px 11px -4px rgb(0 248 255 / 0%), 5px 5px 11px -4px rgb(204 5 255 / 0%);
         margin: 0 auto;
         text-align: center;
         border-left: 0;
-        border-radius: 0
+        border-radius: 0;
+        width: 100%;
+    }
+    .app.sidebar-mini.sidenav-toggled1 .side-menu__item:hover .side-menu__item:focus {
+        display: block;
+        background: #272d44!important;
+        padding: 10px 0;
+        box-shadow: -5px 0px 11px -4px rgb(5 255 220 / 0%), 5px 0px 11px -4px rgb(211 3 255 / 0%), 5px -3px 11px -4px rgb(0 248 255 / 0%), 5px 5px 11px -4px rgb(204 5 255 / 0%);
+        margin: 0 auto;
+        text-align: center;
+        border-left: 0;
+        border-radius: 0;
+        width: 100%;
     }
 
     .app.sidebar-mini.sidenav-toggled .side-menu_label {
@@ -895,11 +923,13 @@
         -webkit-transition: border-left-color .3s ease,background-color .3s ease;
         -o-transition: border-left-color .3s ease,background-color .3s ease;
         transition: border-left-color .3s ease,background-color .3s ease;
-        color: #1a1630;
-        margin: 6px 5px 6px 12px;
+        margin: 6px 5px 6px 0px;
         border-radius: 50px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
         color: #5c678f
     }
+    
 
     .sidebar-mini.sidenav-toggled.sidenav-toggled1 .app-sidebar .slide-item.active {
         text-decoration: none;
@@ -920,11 +950,12 @@
     }
 
     .sidebar-mini.sidenav-toggled.sidenav-toggled1 .app-sidebar .slide.is-expanded a {
-        text-decoration: none
+        text-decoration: none;
     }
 
     .sidebar-mini.sidenav-toggled.sidenav-toggled1 .app-sidebar .side-menu .side-menu__icon {
-        margin-right: 12px
+        margin-right: 12px;
+        margin-left: 12px;
     }
 
     .sidebar-mini.sidenav-toggled.sidenav-toggled1 .app-sidebar .side-menu__label {
@@ -940,8 +971,10 @@
         text-align: center;
         vertical-align: middle;
         margin-right: 12px;
+        margin-left: 12px;
         width: 35px;
         height: 35px;
+        
         background: #fff;
         padding: 8px!important;
         border-radius: 50px;
@@ -956,7 +989,7 @@
         flex: 1 1 auto;
         position: unset;
         display: inline-block;
-        font-size: 13.9px;
+        font-size: 16px;
         color: #1a1630;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto
@@ -1035,7 +1068,8 @@
 }
 
 .app.sidebar-mini.sidenav-toggled .side-menu .side-menu__icon {
-    position: relative
+    position: relative;
+    margin-left: 0;
 }
 
 .app.sidebar-mini .side-menu_label {
@@ -1150,7 +1184,7 @@
 }
 
 .slide-menu a:before {
-    content: '#';
+    content: '❧';
     margin-right: 8px;
     position: relative;
     font-family: typicons!important;
@@ -1321,7 +1355,8 @@
     }
 
     .app.sidebar-mini.sidenav-toggled .side-menu .side-menu__icon {
-        margin-right: 0
+        margin-right: 0;
+        margin-left: 0;
     }
 
     .app.sidebar-mini.sidenav-toggled .slide a.side-menu__item.active:after {
