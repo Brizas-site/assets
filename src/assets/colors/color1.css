@@ -1372,9 +1372,26 @@ li.ui-timepicker-selected {
     }
 
     .slide-item:hover,.slide-item:focus {
-        color: #705ec8
+        animation: colorRotate 1s linear 0s infinite;
     }
 
+    @keyframes colorRotate {
+        from {
+          color: #6666ff;
+        }
+        10% {
+          color: #0099ff;
+        }
+        50% {
+          color: #00ff00;
+        }
+        75% {
+          color: #ff3399;
+        }
+        100% {
+          color: #6666ff;
+          }
+        }
     .sidebar-mini.sidenav-toggled.sidenav-toggled1 .app-sidebar .slide-item.active {
         color: #705ec8;
         background: 0 0
