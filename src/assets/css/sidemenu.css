@@ -575,7 +575,7 @@
     animation: colorRotate 6s linear 0s infinite;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     letter-spacing: .6px;
     opacity: 1;
@@ -701,12 +701,12 @@
     }
 
     .sidebar-mini.sidenav-toggled .app-content {
-        margin-left: 70px
+        margin-left: 0px
     }
 
     .sidebar-mini.sidenav-toggled .app-sidebar {
         left: 0;
-        width: 70px;
+        width: 0px;
         overflow: hidden;
         -webkit-transition: left .3s ease,width .3s ease;
         transition: left .3s ease,width .3s ease;
@@ -1186,10 +1186,27 @@
 .slide-menu a:before {
     content: '❧';
     margin-right: 8px;
+    animation: colorRotate 6s linear 0s infinite;
     position: relative;
     font-family: typicons!important;
-    opacity: .6
 }
+@keyframes colorRotate {
+    from {
+      color: #6666ff;
+    }
+    10% {
+      color: #0099ff;
+    }
+    50% {
+      color: #00ff00;
+    }
+    75% {
+      color: #ff3399;
+    }
+    100% {
+      color: #6666ff;
+      }
+    }
 
 .sidenav-toggled .main-wrapper .side-menu .side-menu__item .nav-badge {
     position: absolute;
@@ -1270,7 +1287,7 @@
     }
 
     .sidenav-toggled .header.top-header {
-        padding-left: 70px
+        padding-left: 0px
     }
 
     .sidenav-toggled .app-sidebar__logo {
